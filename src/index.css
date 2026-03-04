@@ -1,0 +1,67 @@
+/* google font goes here */
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+
+  /* font size */
+    --text-t1-desktop: 72px;
+    --text-t1-mobile: 40px;
+    --text-t2-desktop: 48px;
+    --text-t2-mobile: 32px;
+    --text-t3: 24px;
+    --text-t4-desktop: 18px;
+    --text-t4-mobile: 16px;
+
+    /* color */
+    --color-green500: #FFDF20;
+    --color-gray900: #151515;
+    --color-gray400: #2E2C2C;
+    --color-gray200: #D5D3D3;
+  
+    /* font family */
+    --font-primary: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  h1 { @apply text-white text-t1-mobile sm:text-t1-desktop leading-[1.1] font-bold; }
+  h2 { @apply text-white text-t2-mobile sm:text-t2-desktop leading-[1.2] font-bold;  }
+  h3 { @apply text-white text-t3 font-bold leading-[32px]; }
+  h4 {@apply text-t4-mobile sm:text-t4-desktop uppercase; }
+  body { @apply text-gray200 font-primary text-white text-t4-mobile sm:text-t4-desktop bg-gray900; }
+  button {@apply cursor-pointer font-bold; }
+}
+
+@layer utilities {
+  .container-pro { @apply max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16; }
+  
+  .pd-t-sm { @apply pt-[16px] }
+  .pd-t-md { @apply pt-[32px] }
+  .pd-t-lg { @apply pt-[72px] }
+  .pd-t-xl { @apply pt-[120px] }
+
+  .pd-b-sm { @apply pb-[16px] }
+  .pd-b-md { @apply pb-[32px] }
+  .pd-b-lg { @apply pb-[72px] }
+  .pd-b-xl { @apply pb-[120px] }
+  
+  /* form style */
+  .input-style {
+    @apply outline-none border-b-1 bg-transparent text-white
+    focus:border-green500 duration-300 transition-colors 
+    py-4 px-3 w-full
+  }
+
+  .textarea-style {
+    @apply py-8 
+  }
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#About {
+  scroll-margin-top: 100px; 
+}
