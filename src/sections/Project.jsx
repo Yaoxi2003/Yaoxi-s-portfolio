@@ -13,7 +13,7 @@ export default function Project() {
       CardImgLg: projects.thumbnailProject1Large,
       title: 'Recipes Finder',
       skills: ['html', 'tailwindcss', 'react'],
-      link: '/project1'
+      link: 'https://recipefinderdemo2.netlify.app/'
     },
 
   ]
@@ -47,3 +47,4 @@ export default function Project() {
     </motion.section>
   )
 }
+
