@@ -9,7 +9,9 @@ const [isError, setIsError] = useState(false)
 // check if recieve a request successfully
 const [send, setSend] = useState(false)
 
-function signUp(formData) {
+async function signUp(e) {
+  e.preventDefault()
+  const formData = new FormData(e.target)
   const email = formData.get('email')
   const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -19,7 +21,19 @@ function signUp(formData) {
     }
 
   setIsError(false)
-  setSend(true)
+
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+    if (response.ok) {
+      setSend(true)
+    }
+  } catch (error) {
+    console.error('Form submission error:', error)
+  }
 }
 
   return (
@@ -39,10 +53,10 @@ function signUp(formData) {
               <p>I'm currently seeking junior frontend or internship opportunities in Sydney. If you're looking for a developer who values clean design and accessible code, I'd love to connect. Drop me a message, and I'll get back to you shortly.</p>
             </article>
 
-            <form action={signUp} 
-            name="contact" 
+            <form onSubmit={signUp}
+            name="contact"
             method="POST"
-            netlify
+            data-netlify="true"
             className="w-full max-w-[445px] flex flex-col items-end gap-4">
 
               {/* receive message to netifly */}
