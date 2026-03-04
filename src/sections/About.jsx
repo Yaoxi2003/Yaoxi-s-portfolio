@@ -42,7 +42,7 @@ function signUp(formData) {
             <form action={signUp} 
             name="contact" 
             method="POST"
-            data-netlify="true"
+            netlify
             className="w-full max-w-[445px] flex flex-col items-end gap-4">
 
               {/* receive message to netifly */}
@@ -88,3 +88,4 @@ function signUp(formData) {
     </motion.section>
   )
 }
+
