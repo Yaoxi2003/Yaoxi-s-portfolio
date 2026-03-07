@@ -13,7 +13,7 @@ export default function Project() {
       CardImgLg: projects.thumbnailProject1Large,
       title: 'Recipes Finder',
       skills: ['html', 'tailwindcss', 'react'],
-      link: 'https://recipefinderdemo2.netlify.app/'
+      link: 'https://yaoxidetailproject.netlify.app/'
     },
 
   ]
