@@ -19,7 +19,7 @@ export default function Card({children, cardImgSm, cardImgLg, skills, link}) {
             {/* Desktop links */}
             <div className="absolute z-10 top-0 left-0 w-full h-full
             hidden group-hover:lg:flex flex-col gap-4 items-center justify-center bg-gray900/40">
-                <a className={buttons.bottomLineBtn} href='https://recipefinderdemo2.netlify.app/' target="_blank">VIEW PROJECT</a>
+                <a className={buttons.bottomLineBtn} href={link} target="_blank">VIEW PROJECT</a>
                 <Link className={buttons.bottomLineBtn} >VIEW CODE</Link>
             </div>
 
@@ -32,7 +32,7 @@ export default function Card({children, cardImgSm, cardImgLg, skills, link}) {
         {/* Links in mobile and tablet screen*/}
         <div className="flex items-center gap-4
                         lg:hidden">
-            <a className={buttons.bottomLineBtn} href='https://recipefinderdemo2.netlify.app/' target="_blank">VIEW PROJECT</a>
+            <a className={buttons.bottomLineBtn} href={link} target="_blank">VIEW PROJECT</a>
             <Link className={buttons.bottomLineBtn} >VIEW CODE</Link>
         </div>
 
