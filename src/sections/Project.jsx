@@ -15,6 +15,13 @@ export default function Project() {
       skills: ['html', 'tailwindcss', 'react'],
       link: 'https://yaoxidetailproject.netlify.app/'
     },
+    { 
+      CardImgSm: projects.thumbnailProject2Small,
+      CardImgLg: projects.thumbnailProject2Large,
+      title: 'tic tac toe',
+      skills: ['html', 'tailwindcss', 'react'],
+      link: 'https://tacticgames.netlify.app/'
+    },
 
   ]
 
