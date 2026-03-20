@@ -11,10 +11,10 @@ export default function Card({children, cardImgSm, cardImgLg, skills, link}) {
   return (
     <div className="flex flex-col gap-4">
 
-        <picture className="relative group h-100">
+        <picture className="relative group h-100 max-h-100">
             <source media="(min-width: 1024px)" srcSet={cardImgLg} />
             <img src={cardImgSm} alt="The project image"
-                className="w-full object-cover" />
+                className="w-full h-full object-cover" />
 
             {/* Desktop links */}
             <div className="absolute z-10 top-0 left-0 w-full h-full
