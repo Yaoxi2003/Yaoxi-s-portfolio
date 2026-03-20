@@ -11,7 +11,7 @@ export default function Card({children, cardImgSm, cardImgLg, skills, link}) {
   return (
     <div className="flex flex-col gap-4">
 
-        <picture className="relative group">
+        <picture className="relative group h-100">
             <source media="(min-width: 1024px)" srcSet={cardImgLg} />
             <img src={cardImgSm} alt="The project image"
                 className="w-full object-cover" />
